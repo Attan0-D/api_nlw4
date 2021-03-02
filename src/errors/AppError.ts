@@ -1,3 +1,5 @@
+
+//Esta classe Aprimora a exibição de possiveis erros para ser mostrados ao usuario
 export class AppError{
    public readonly message: string;
    public readonly statusCode: number;

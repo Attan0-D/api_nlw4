@@ -24,11 +24,11 @@ router.get('/surveys', surveyController.show);
 //rota para o sendmail
 router.post("/sendMail", sendMailController.execute);
 
-
-//rota para a execução da avaliação das respostas
+//rota para a execução da avaliação das respostas, comentário opcional e página final
 router.get("/answers/:value", answerController.execute);
 
 //calculo de NPS
 router.get("/nps/:survey_id", npsController.execute);
+
 
 export {router};

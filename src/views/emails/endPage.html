@@ -1,0 +1,124 @@
+<style>
+    body {
+  font-family: Arial, sans-serif;
+  background-color: #050225;
+  /* background-size: cover; */
+  height: 100vh;
+}
+
+textarea#styled {
+	width: 600px;
+	height: 120px;
+	border: 3px solid #a008ad;
+	padding: 5px;
+	font-family: Tahoma, sans-serif;
+	background-image: url(bg.gif);
+	background-position: bottom right;
+	background-repeat: no-repeat;
+  justify-items: center;
+  justify-content: center;
+}
+
+.w3-container{
+  width: 875px;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+    }
+
+.button-cont{
+  display: flex;
+  margin-bottom: 12px;
+  margin-top: 6px;
+}
+
+.background-img{
+  margin-top: 100px;
+  margin-left: 400px;
+}
+
+a{
+        padding: 10px;
+        margin: 200px;
+        background: #8257e6;
+        color: #FFF;
+        border-radius: 6px;
+        width: 15px;
+        text-align: center;
+        text-decoration: none;
+    }
+
+
+</style>    
+<!-- 
+<h1>Popup/Modal Windows without JavaScript</h1>
+<div class="box">
+	<a class="button" href="#popup1">Let me Pop up</a>
+</div>
+
+<div id="popup1" class="overlay" href="#popup1">
+	<div class="popup">
+		<h2>Here i am</h2>
+		<a class="close" href="#">&times;</a>
+		<div class="content">
+			<textarea 
+                name="comment"
+                id="comment" 
+                cols="30" 
+                rows="10" 
+                placeholder="Faça um comentário (Opcional)">{{comment}}</textarea>
+                <br>
+                <a class="close" href="#">Enviar</a>
+		</div>
+	</div>
+</div> -->
+
+<!DOCTYPE html>
+<html>
+<title>Enviado</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<body onload="document.getElementById('id01').style.display='block'">
+  <div style="color: #b77af1;" class="background-img"><img 
+    src="https://www.flaticon.com/svg/static/icons/svg/2643/2643587.svg" 
+    title="Icons made by Eucalyp from https://www.flaticon.com/"
+    height="350"
+    width="350"
+    style="margin-left: 80px;">
+    <h2 style="margin-left: 12px;">Requisição enviada com sucesso! </h2>
+    <br>
+    <a  href=""> Voltar </a>
+  </div>
+
+
+  <div class="w3-container" >
+  <div id="id01" class="w3-modal">
+    <div class="w3-modal-content">
+      <div class="w3-container">
+        <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+        <h3>Comente um pouco sobre a pergunta {{title}}.</h3>
+        <textarea 
+        name="styled-textarea" 
+        id="styled"
+        onfocus="this.value=''; 
+        setbg('#e5fff3');" 
+        onblur="setbg('white')"
+        placeholder="Faça um comentário sobre a pergunta (Opcional)"></textarea>
+        <br>
+        <br>
+        <div class="button-cont">
+          <button onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-purple"> Enviar </button>
+        </div>
+        <br><br>
+      </div>
+    </div>
+  </div>
+</div>
+            
+</body>
+
+<script></script>
+</html>

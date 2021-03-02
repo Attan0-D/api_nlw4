@@ -50,9 +50,11 @@ class UserController{
 		//salvando no banco
 		await usersRepository.save(user);
 
+		//retorna status 201 (created) e o json de user (suas infos)
 		return response.status(201).json(user);
 
 	}
+
 }
 
 export { UserController };

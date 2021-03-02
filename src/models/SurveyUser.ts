@@ -30,6 +30,9 @@ class SurveyUser {
         @Column()
         value: number;
 
+        
+        // comment: string;
+
         //decorator para coluna de data
         @CreateDateColumn()
         created_at: Date;

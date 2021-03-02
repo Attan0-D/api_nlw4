@@ -9,9 +9,10 @@ import { AppError } from "../errors/AppError";
 
 
 class SendMailController {
+
     async execute(request: Request, response: Response) {
         const { email, survey_id} = request.body;
-
+        
         const usersRepository = getCustomRepository(UsersRepository);
         const surveysRepository = getCustomRepository(SurveysRepository);
         const surveysUsersRepository = getCustomRepository(SurveysUsersRepository);
@@ -29,9 +30,7 @@ class SendMailController {
 		}
 
         // Enviando email para o usuario
-        const npsPath = resolve(__dirname, "..", "views", "emails", "npsMail.hbs");
-
-        
+        const npsPath = resolve(__dirname, "..", "views", "emails", "npsMail.hbs");        
 
         const surveyUserAlreadyExists = await surveysUsersRepository.findOne({
             where: { user_id: user.id , value:null },

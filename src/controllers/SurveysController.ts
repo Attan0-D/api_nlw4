@@ -20,12 +20,14 @@ class SurveysController{
         return response.status(201).json(survey);
     }
 
-    async show(request: Request, response: Response){
+    async show(response: Response){
         const surveysRepository = getCustomRepository(SurveysRepository);
 
         const all = await surveysRepository.find();
         return response.json(all);
     }
+
+
 }
 
 export {SurveysController}
